@@ -15,9 +15,10 @@ class Naming {
 		const normalizedName = this.getNormalisedName(alarmName);
 		return `${prefix}${normalizedName}Alarm`;
 	}
-        
-	getLogMetricCFRef(normalizedName,alarmName){
-		return `${normalizedName}${alarmName}LogMetricFilter`;
+		
+	getLogMetricCFRef(normalizedName, stackName, alarmName){
+		const stack = _.upperFirst(_.camelCase(stackName));
+		return `${normalizedName}${stack}${alarmName}LogMetricFilter`;
 	}
 
 }
