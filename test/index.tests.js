@@ -452,7 +452,7 @@ describe('#index', function () {
 							"InsufficientDataActions": []
 						}
 					},
-					"FooLambdaFunctionFooserviceDevbunyanErrorsLogMetricFilterALERT": {
+					"FooLambdaFunctionbunyanErrorsLogMetricFilterALERT": {
 						"Type": "AWS::Logs::MetricFilter",
 						"DependsOn": "foo",
 						"Properties": {
@@ -467,7 +467,7 @@ describe('#index', function () {
 							]
 						}
 					},
-					"FooLambdaFunctionFooserviceDevbunyanErrorsLogMetricFilterOK": {
+					"FooLambdaFunctionbunyanErrorsLogMetricFilterOK": {
 						"Type": "AWS::Logs::MetricFilter",
 						"DependsOn": "foo",
 						"Properties": {

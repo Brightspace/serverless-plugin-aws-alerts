@@ -16,9 +16,13 @@ class Naming {
 		return `${prefix}${normalizedName}Alarm`;
 	}
 		
-	getLogMetricCFRef(normalizedName, stackName, alarmName){
-		const stack = _.upperFirst(_.camelCase(stackName));
-		return `${normalizedName}${stack}${alarmName}LogMetricFilter`;
+	getLogMetricCFRef(normalizedName, alarmName){
+		return `${normalizedName}${alarmName}LogMetricFilter`;
+	}
+
+	getPatternMetricName(metricName, stackName, functionName){
+		stackName = _.upperFirst(_.camelCase(stackName));
+		return `${stackName}${metricName}${functionName}`;
 	}
 
 }
